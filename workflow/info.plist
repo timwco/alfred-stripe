@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>co.timw.alfred.stripe</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>4E1F0A00-0001-4001-8001-000000000001</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4E1F0A00-0002-4002-8002-000000000002</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Tim Whitacre</string>
+	<key>description</key>
+	<string>Search the Stripe Dashboard for anything — charge IDs, payment methods, customers, etc. — and open the results in your default browser.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Stripe Search</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>stripe</string>
+				<key>subtext</key>
+				<string>Search the Stripe Dashboard for “{query}”</string>
+				<key>text</key>
+				<string>Search Stripe for “{query}”</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4E1F0A00-0001-4001-8001-000000000001</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>https://dashboard.stripe.com/search?query={query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>4E1F0A00-0002-4002-8002-000000000002</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Type `stripe` followed by anything you'd search in Stripe (a charge ID like ch_..., a PaymentIntent pi_..., a payment method pm_..., a customer email, etc.) and hit Enter. It opens https://dashboard.stripe.com/search?query=... in your default browser.
+
+You must already be logged into Stripe and have the correct account selected — the search runs in whatever account/mode your browser session is currently in.</string>
+	<key>uidata</key>
+	<dict>
+		<key>4E1F0A00-0001-4001-8001-000000000001</key>
+		<dict>
+			<key>xpos</key>
+			<integer>110</integer>
+			<key>ypos</key>
+			<integer>110</integer>
+		</dict>
+		<key>4E1F0A00-0002-4002-8002-000000000002</key>
+		<dict>
+			<key>xpos</key>
+			<integer>400</integer>
+			<key>ypos</key>
+			<integer>110</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.0</string>
+	<key>webaddress</key>
+	<string>https://labs.timw.co/alfred-stripe</string>
+</dict>
+</plist>
